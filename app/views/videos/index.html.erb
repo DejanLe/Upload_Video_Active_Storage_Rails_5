@@ -1,0 +1,29 @@
+ <div class="allvideo">
+  <div class="container">
+
+<%= link_to 'New Video', new_video_path %>
+    <div class="row">
+  
+    
+    <% @videos.each do |video| %>
+      <div class="col-md-4">
+      <video id="my-video" class="video-js" controls preload="auto" width="100%" height="auto"
+      poster=" <%= image_tag(video.thumbnail) %>  "
+         data-setup="{}">
+        <source src= "
+        <%= url_for(video.video)  %> " type='video/mp4'> 
+         
+      </video> 
+        <%= video.title %> 
+         <%= video.description %> 
+        <%= link_to 'Show', video %> 
+        <%= link_to 'Edit', edit_video_path(video) %> 
+         <%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %> 
+         </div>
+    <% end %> 
+      </div>
+    
+   
+</div> 
+  </div> 
+ </div>

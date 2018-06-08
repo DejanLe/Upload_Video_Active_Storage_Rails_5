@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Videopost</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://vjs.zencdn.net/7.0.3/video-js.css" rel="stylesheet">
+
+     <script src="http://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></scrip>
+     <script src="https://vjs.zencdn.net/7.0.3/video.js"></script>
+     </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
